@@ -13,6 +13,7 @@ def load_and_clean_data():
 
     util_columns = [
         "customer_id",
+        "order_id",
         "order_purchase_timestamp",
         "price",
         "review_score",
