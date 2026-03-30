@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def scale_features(df_rfm):
-    columns_to_scale = ["recency", "frequency", "monetary"]
+    columns_to_scale = ["recency", "frequency", "monetary", "avg_sentiment"]
 
     df_scaled = StandardScaler().fit_transform(df_rfm[columns_to_scale])
 
