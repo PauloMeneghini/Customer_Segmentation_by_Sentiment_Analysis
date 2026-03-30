@@ -20,7 +20,7 @@ def load_and_clean_data():
         "review_comment_message"
     ]
 
-    df_ml = df_final[util_columns]
+    df_ml = df_final[util_columns].copy()
     df_ml["order_purchase_timestamp"] = pd.to_datetime(df_ml["order_purchase_timestamp"])
 
     return df_ml
