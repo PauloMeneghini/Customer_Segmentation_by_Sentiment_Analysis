@@ -20,4 +20,7 @@ def build_rfm_features(df_ml, df_nlp):
 
     df_rfm["recency"] = (recent_date - df_rfm["last_purchase_date"]).dt.days
 
+    limite = df_rfm["monetary"].quantile(0.99)
+    df_rfm = df_rfm[df_rfm["monetary"] < limite]
+
     return df_rfm[["customer_id", "recency", "frequency", "monetary", "avg_sentiment"]]
