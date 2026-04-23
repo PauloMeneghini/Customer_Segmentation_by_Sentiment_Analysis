@@ -1,0 +1,16 @@
+{
+    "workbench.editorAssociations": {
+        "*.parquet": "duckdb.dataFileViewer",
+        "*.csv": "duckdb.dataFileViewer",
+        "*.tsv": "duckdb.dataFileViewer"
+    },
+    "duckdb.databases": [
+        {
+            "alias": "olist_analytics",
+            "type": "file",
+            "path": "/Users/paulomeneghini/Documents/Customer_Segmentation_by_Sentiment_Analysis/data/olist_analytics.db",
+            "attached": false
+        }
+    ],
+    "duckdb.defaultDatabase": "olist_analytics"
+}

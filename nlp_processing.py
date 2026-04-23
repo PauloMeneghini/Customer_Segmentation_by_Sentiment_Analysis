@@ -18,15 +18,18 @@ def clean_text(text):
     return text
 
 def extract_sentiment_features(df_ml):
+    print("=" * 50)
     print("\nExtracting sentiment features...")
 
     df_nlp = df_ml.copy()
 
     df_nlp["review_comment_message"] = df_nlp["review_comment_message"].fillna("")
 
+    print("=" * 50)
     print("Cleaning characters and scores...")
     df_nlp["clean_review"] = df_nlp["review_comment_message"].apply(clean_text)
 
+    print("=" * 50)
     print("Extracting sentiment scores...")
     sentiment_map = {
         1: -1.0,  # Muito Negativo
