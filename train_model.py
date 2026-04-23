@@ -10,6 +10,7 @@ def scale_features(df_rfm):
 
     df_scaled = pd.DataFrame(df_scaled, columns=columns_to_scale)
 
+    print("=" * 50)
     print("\nScaled Features:")
     print(df_scaled.head())
     return df_scaled
@@ -27,6 +28,7 @@ def find_best_k(df_scaled):
     plt.xlabel("Number of Clusters")
     plt.ylabel("Inertia")
     plt.savefig("elbow_method.png")
+    print("=" * 50)
     print("\nElbow method saved to elbow_method.png")
 
 
